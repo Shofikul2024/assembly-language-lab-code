@@ -1,7 +1,9 @@
-      .MODEL
+   .MODEL
       .DATA  
       
-      
+      X DW 10
+     Y DW 20       
+     
      .STACK =100H   
             
             
@@ -9,9 +11,10 @@
      
      MAIN PROC  
         
-        MOV AX, 10
-        MOV BX,20
-        SUB BX,AX 
+        
+        MOV AX,X
+        MOV BX,Y
+        ADD AX,BX
         
          MAIN ENDP
      END MAIN
